@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>change image on click-javascript</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="imgBox"><img src="dog.webp"></div>
+    
+        <u1 class="thumb">
+            <li><a href="dog.webp" target="imgBox"><img src="dog.webp" width="120px"></a></li>
+            <li><a href="img5.jfif" target="imgBox"><img src="img5.jfif" width="120px"></a></li>
+            <li><a href="img2.jfif" target="imgBox"><img src="img2.jfif" width="120px"></a></li>
+            <li><a href="background.jfif" target="imgBox"><img src="background.jfif" width="120px"></a></li>
+            <li><a href="im.jfif" target="imgBox"><img src="im.jfif" width="120px"></a></li>
+            
+            
+        </u1>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+            <script type="text/javascript">
+            $(document).ready(function(){
+                $('.thumb a').click(function(e){
+                    e.preventDefault();
+                    $('.imgBox img').attr("src",$(this).attr("href"))
+                })
+            })
+        </script>
+
+    </body>
